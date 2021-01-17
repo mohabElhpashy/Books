@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Component } from "react";
+import img1 from "../src/imgs/images.jpg";
+import img2 from "../src/imgs/o9YeaK.jpg";
+class App extends Component {
+  state = {
+    img: [img1, img2],
+    index: 0,
+  };
+  componentDidMount() {
+    if (this.state.index === 1) this.setState({ index: 0 });
+    setInterval(() => {
+      this.setState({
+        index: this.state.index + 1,
+      });
+      if (this.state.index >= this.state.img.length) {
+        this.setState({ index: 0 });
+      }
+    }, 3000);
+  }
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  render() {
+    return (
+      <div className="App">
+        <img
+          className="sidewarp"
+          src={this.state.img[this.state.index]}
+          alt="soara"
+        ></img>
+      </div>
+    );
+  }
 }
 
 export default App;
