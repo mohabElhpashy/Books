@@ -22,11 +22,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <img
-          className="sidewarp"
-          src={this.state.img[this.state.index]}
-          alt="soara"
-        ></img>
+        <div className="maindiv">
+          {" "}
+          <h1>Book Site</h1>
+        </div>
       </div>
     );
   }
