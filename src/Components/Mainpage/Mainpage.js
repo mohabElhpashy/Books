@@ -1,10 +1,10 @@
 import "./Mainpage.css";
 import { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Form, Button, Link } from "react-bootstrap";
+import { Form, Button } from "react-bootstrap";
 import face from "../../imgs/face.jpg";
 import gmail from "../../imgs/gmail.jpg";
-import Content from "../Content/Content";
+// import Content from "../Content/Content";
 
 class Mainapage extends Component {
   state = {
@@ -48,7 +48,7 @@ class Mainapage extends Component {
     return (
       <div className="Mainpage">
         <p
-          style={{  
+          style={{
             color: "white",
             fontStyle: "italic",
             fontweight: "bold",
@@ -105,11 +105,7 @@ class Mainapage extends Component {
           <Form.Group controlId="formBasicPassword">
             <Form.Control type="password" placeholder="Password" />
           </Form.Group>
-          <a
-           href='signup'
-          >
-            LOG iN
-          </a>
+          <a href="signup">LOG iN</a>
         </Form>
         <Form id="sign" className="sign_form">
           <h1 style={{ color: "#e8716d" }}>SIGN UP</h1>
