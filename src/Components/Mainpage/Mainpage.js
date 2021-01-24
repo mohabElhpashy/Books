@@ -1,7 +1,10 @@
 import "./Mainpage.css";
 import { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Form, Button } from "react-bootstrap";
+import { Form, Button, Link } from "react-bootstrap";
+import face from "../../imgs/face.jpg";
+import gmail from "../../imgs/gmail.jpg";
+import Content from "../Content/Content";
 
 class Mainapage extends Component {
   state = {
@@ -34,11 +37,18 @@ class Mainapage extends Component {
 
     document.getElementById("log").style.zIndex = "1";
   };
+  login = () => {
+    // alert("tmamm");
+    if (document.getElementById("1").value === "mohab") {
+      // eslint-disable-next-line jsx-a11y/anchor-has-content
+      return <a href="signup" />;
+    }
+  };
   render() {
     return (
       <div className="Mainpage">
         <p
-          style={{
+          style={{  
             color: "white",
             fontStyle: "italic",
             fontweight: "bold",
@@ -82,7 +92,12 @@ class Mainapage extends Component {
         <Form id="log" className="login_form">
           <h1 style={{ color: "#e8716d" }}>LOG IN</h1>
           <Form.Group controlId="formBasicEmail">
-            <Form.Control type="email" placeholder="Enter email" />
+            <Form.Control
+              type="email"
+              placeholder="Enter email"
+              value="mohab"
+              id="1"
+            />
             <Form.Text className="text-muted">
               We'll never share your email with anyone else.
             </Form.Text>
@@ -90,12 +105,11 @@ class Mainapage extends Component {
           <Form.Group controlId="formBasicPassword">
             <Form.Control type="password" placeholder="Password" />
           </Form.Group>
-          <Button
-            style={{ position: "absolute", left: "100px", width: "150px" }}
-            variant="outline-danger"
+          <a
+           href='signup'
           >
             LOG iN
-          </Button>
+          </a>
         </Form>
         <Form id="sign" className="sign_form">
           <h1 style={{ color: "#e8716d" }}>SIGN UP</h1>
@@ -116,8 +130,23 @@ class Mainapage extends Component {
             style={{ position: "absolute", left: "100px", width: "150px" }}
             variant="outline-danger"
           >
-            SIGN Up{" "}
+            SIGN Up
           </Button>
+          <img
+            alt="sora"
+            style={{
+              position: "absolute",
+              top: "350px",
+              right: "250px",
+              hover: "pointer",
+            }}
+            src={face}
+          />
+          <img
+            alt="sora"
+            style={{ position: "absolute", top: "350px", right: "120px" }}
+            src={gmail}
+          />
         </Form>
       </div>
     );

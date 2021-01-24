@@ -1,11 +1,13 @@
 import "./App.css";
 import { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 // import { Button } from "react-bootstrap";
 // import img1 from "../src/imgs/images.jpg";
 // import img2 from "../src/imgs/o9YeaK.jpg";'
 import Mainapage from "../src/Components/Mainpage/Mainpage";
+import Content from "../src/Components/Content/Content";
 class App extends Component {
   state = {
     img: [
@@ -28,19 +30,20 @@ class App extends Component {
 
   render() {
     return (
-      // <Router>
-      //   <Nav />
-      //   <Switch>
-      //     <Route path="/" exact component={LoginPage} />
-      //     <Route path="/signup" exact component={Signup} />
-      //     <Route path="/login" exact component={Home} />
-      //     <Route path="/post" exact component={Post} />
-      //     <Route path="/allposts" exact component={Allposts} />
-      //   </Switch>
-      // </Router>
-      <div className="app">
-        <Mainapage />
-      </div>
+      <Router>
+        {/* <Nav /> */}
+        <Switch>
+          <Route path="/" exact component={Mainapage} />
+          <Route path="/signup" exact component={Content} />
+          {/* 
+          <Route path="/login" exact component={Home} />
+          <Route path="/post" exact component={Post} />
+          <Route path="/allposts" exact component={Allposts} /> */}
+        </Switch>
+      </Router>
+      // <div className="app">
+      //   < />
+      // </div>
     );
   }
 }
