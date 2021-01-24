@@ -1,0 +1,67 @@
+.Mainpage {
+  width: cover;
+  height: 657px;
+  display: block;
+  position: relative;
+}
+
+.Mainpage::after {
+  content: "";
+  background: url("../../imgs/mainback.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.8;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+.signup {
+  background-color: rgba(34, 34, 34, 0.85);
+  position: absolute;
+  width: 1000px;
+  color: white;
+  height: 250px;
+  left: 150px;
+  top: 200px;
+}
+.login_form {
+  width: 400px;
+  background-color: white;
+  position: absolute;
+  line-height: 50px;
+  left: 700px;
+  height: 400px;
+  top: 100px;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 2px 0 15px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  transition: 0.8s ease-in-out;
+  z-index: 1;
+  letter-spacing: 3px;
+  font-style: italic;
+  text-align: center;
+
+  /* animation: getRight 3s 1 ease-in-out; */
+}
+.sign_form {
+  width: 400px;
+  background-color: white;
+  position: absolute;
+  line-height: 70px;
+  left: 700px;
+  height: 400px;
+  top: 100px;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 2px 0 15px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  transition: 0.8s ease-in-out;
+  z-index: 0;
+  letter-spacing: 2px;
+  font-style: italic;
+  text-align: center;
+}

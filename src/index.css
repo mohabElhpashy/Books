@@ -6,11 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  background-image: url("../src/imgs/1.jpg");
-  width: 100%;
-  height: 636px;
-  opacity: 0.7;
-  background-origin: border-box;
+  background-color: gainsboro;
 }
 
 code {
