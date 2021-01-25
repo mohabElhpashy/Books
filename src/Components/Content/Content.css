@@ -4,11 +4,20 @@
 .divinfo {
   position: fixed;
   background-color: gainsboro;
-  width: 300px;
+  width: 330px;
   height: 0;
-  left: 1065px;
+  left: 1010px;
   transition: 0.8s ease-in-out;
   z-index: 1;
   overflow-x: hidden;
   border-radius: 15px;
+  text-align: center;
+}
+.profile:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.divinfo h5:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
