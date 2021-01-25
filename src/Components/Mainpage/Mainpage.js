@@ -40,7 +40,7 @@ class Mainapage extends Component {
     // alert("tmamm");
     if (document.getElementById("1").value === "mohab") {
       // eslint-disable-next-line jsx-a11y/anchor-has-content
-      window.location = "http://localhost:3000/signup";
+      window.location = "signup";
     }
   };
   render() {
