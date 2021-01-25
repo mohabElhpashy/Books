@@ -1,0 +1,13 @@
+.navbar {
+  background-color: black;
+}
+.divinfo {
+  position: fixed;
+  background-color: gainsboro;
+  width: 0px;
+  height: 560px;
+  left: 1065px;
+  transition: 0.8s ease-in-out;
+  z-index: 1;
+  overflow-x: hidden;
+}

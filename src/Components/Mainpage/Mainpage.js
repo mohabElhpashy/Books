@@ -4,7 +4,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Form, Button } from "react-bootstrap";
 import face from "../../imgs/face.jpg";
 import gmail from "../../imgs/gmail.jpg";
-// import Content from "../Content/Content";
 
 class Mainapage extends Component {
   state = {
@@ -41,7 +40,7 @@ class Mainapage extends Component {
     // alert("tmamm");
     if (document.getElementById("1").value === "mohab") {
       // eslint-disable-next-line jsx-a11y/anchor-has-content
-      return <a href="signup" />;
+      window.location = "http://localhost:3000/signup";
     }
   };
   render() {
@@ -105,7 +104,13 @@ class Mainapage extends Component {
           <Form.Group controlId="formBasicPassword">
             <Form.Control type="password" placeholder="Password" />
           </Form.Group>
-          <a href="signup">LOG iN</a>
+          <Button
+            style={{ position: "absolute", left: "100px", width: "150px" }}
+            variant="outline-danger"
+            onClick={this.login}
+          >
+            LOG iN
+          </Button>
         </Form>
         <Form id="sign" className="sign_form">
           <h1 style={{ color: "#e8716d" }}>SIGN UP</h1>
