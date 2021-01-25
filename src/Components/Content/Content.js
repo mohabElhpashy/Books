@@ -2,14 +2,18 @@
 import { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import book from "../../imgs/books.jpg";
-import pic from "../../imgs/Capture.PNG";
+import test from "../../imgs/five.jpg";
+
+// import pic from "../../imgs/Capture.PNG";
 
 import "./Content.css";
-import { Form, Button, Navbar, FormControl } from "react-bootstrap";
+import { Form, Button, Navbar, FormControl, Card } from "react-bootstrap";
 
 class Content extends Component {
   state = {
     flag: false,
+    tittle: ["1", "2", "3", "4", "5", "6", "7"],
+    card_text: ["one", "two", "three", "four", "five", "six", "seven"],
   };
   showDivinfo = () => {
     if (this.state.flag === false) {
@@ -22,6 +26,23 @@ class Content extends Component {
     }
   };
   render() {
+    const mapping = this.state.tittle.map((index, tittle) => {
+      return (
+        <div className="divcontent">
+          <Card id="card" style={{ width: "18rem" }}>
+            <Card.Img variant="top" src={test} />
+            <Card.Body>
+              <Card.Title>{tittle}</Card.Title>
+              <Card.Text>
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </Card.Text>
+              <Button variant="primary">Go somewhere</Button>
+            </Card.Body>
+          </Card>
+        </div>
+      );
+    });
     return (
       <div>
         <Navbar bg="dark" variant="dark">
@@ -61,12 +82,13 @@ class Content extends Component {
               position: "absolute",
               top: "325px",
               left: "100px",
-              color: "#B22222",
+              color: "#0000FF ",
             }}
           >
             LOG OuT !
           </h5>
         </div>
+        {mapping}
       </div>
     );
   }
