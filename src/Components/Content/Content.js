@@ -1,31 +1,30 @@
 // import "./Mainpage.css";
 import { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-// import book from "../../imgs/books.jpg";
-// import pic from "../../imgs/pic.jpg";
+import book from "../../imgs/books.jpg";
+import pic from "../../imgs/pic.jpg";
 
 import "./Content.css";
-// import { Form, Button, Navbar, FormControl } from "react-bootstrap";
+import { Form, Button, Navbar, FormControl } from "react-bootstrap";
 
 class Content extends Component {
-  // state = {
-  //   flag: false,
-  // };
-  // showDivinfo = () => {
-  //   if (this.state.flag === false) {
-  //     document.getElementById("divInf").style.height = "560px";
-  //     this.setState({ flag: true });
-  //   }
-  //   if (this.state.flag) {
-  //     document.getElementById("divInf").style.height = "0";
-  //     this.setState({ flag: false });
-  //   }
-  // };
+  state = {
+    flag: false,
+  };
+  showDivinfo = () => {
+    if (this.state.flag === false) {
+      document.getElementById("divInf").style.height = "560px";
+      this.setState({ flag: true });
+    }
+    if (this.state.flag) {
+      document.getElementById("divInf").style.height = "0";
+      this.setState({ flag: false });
+    }
+  };
   render() {
     return (
       <div>
-        content page
-        {/* <Navbar bg="dark" variant="dark">
+        <Navbar bg="dark" variant="dark">
           <Navbar.Brand>
             <img
               style={{
@@ -57,7 +56,7 @@ class Content extends Component {
           />
         </Navbar>
 
-        <div className="divinfo" id="divInf"></div> */}
+        <div className="divinfo" id="divInf"></div>
       </div>
     );
   }
