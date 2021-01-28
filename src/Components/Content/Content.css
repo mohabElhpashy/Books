@@ -27,3 +27,13 @@
   flex-wrap: nowrap;
   margin: 12px;
 }
+#card:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.rate-this-stars ol li {
+  background: url("../../imgs/star.jpg");
+  background-repeat: no-repeat;
+  float: left;
+}

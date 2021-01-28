@@ -12,7 +12,15 @@ import { Form, Button, Navbar, FormControl, Card } from "react-bootstrap";
 class Content extends Component {
   state = {
     flag: false,
-    tittle: ["1", "2", "3", "4", "5", "6", "7"],
+    tittle: [
+      "The Love Square",
+      "The Love Square",
+      "The Love Square",
+      "The Love Square",
+      "The Love Square",
+      "The Love Square",
+      "The Love Square",
+    ],
     card_text: ["one", "two", "three", "four", "five", "six", "seven"],
   };
   showDivinfo = () => {
@@ -26,18 +34,34 @@ class Content extends Component {
     }
   };
   render() {
-    const mapping = this.state.tittle.map((index, tittle) => {
+    const mapping = this.state.tittle.map((index, tittlee) => {
       return (
         <div className="divcontent">
-          <Card id="card" style={{ width: "18rem" }}>
-            <Card.Img variant="top" src={test} />
+          <Card style={{ width: "18rem" }}>
+            <Card.Img
+              variant="top"
+              src={test}
+              style={{ width: "288px", height: "250px" }}
+              id="card"
+            />
             <Card.Body>
-              <Card.Title>{tittle}</Card.Title>
+              <Card.Title>{index}</Card.Title>
+              <hr />
               <Card.Text>
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.
               </Card.Text>
-              <Button variant="primary">Go somewhere</Button>
+              <Button variant="danger">+</Button>
+              <span class="rate-this-stars">
+                <h5>Rate this page</h5>
+                <ol class="rate-this-stars-list">
+                  <li class="star" value="5"></li>
+                  <li class="star" value="4"></li>
+                  <li class="star" value="3"></li>
+                  <li class="star" value="2"></li>
+                  <li class="star" value="1"></li>
+                </ol>
+              </span>
             </Card.Body>
           </Card>
         </div>
