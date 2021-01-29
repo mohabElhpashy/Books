@@ -32,8 +32,14 @@
   cursor: pointer;
 }
 
-.rate-this-stars ol li {
+.rate-this-stars button {
   background: url("../../imgs/star.jpg");
+
   background-repeat: no-repeat;
   float: left;
+  width: 20px;
+  height: 20px;
+  outline: none;
+  border: 1px solid white;
+  margin-left: 10px;
 }
