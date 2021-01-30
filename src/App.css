@@ -1,36 +1,14 @@
-.App {
-  text-align: center;
-  transition: all 0.5s ease-in-out;
+div {
+  color: blue;
 }
-.maindiv {
-  width: 50%;
-  height: 350px;
-  color: black;
-  border-radius: 15px;
-  position: absolute;
-  left: 25%;
-  top: 25px;
-  font-weight: 300px;
-  box-shadow: -5px -5px 8px 4px #fff;
-  letter-spacing: 1.5px;
-  word-wrap: break-word;
-  overflow-y: auto;
-}
-.login {
-  position: absolute;
-  top: 400px;
-  left: 35%;
-  display: flex;
-  opacity: 0.8;
 
-  /* color: white; */
+.calssmuneue {
+  color: green;
 }
-.one,
-.two {
-  color: white;
-  width: 100px;
-  background-color: white;
-  margin-left: 20px;
-
-  /* background-color: white; */
+#menue {
+  color: red;
+  background-color: green;
+  width: 200px;
+  padding: 100px;
+  box-sizing: border-box;
 }

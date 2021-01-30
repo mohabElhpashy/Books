@@ -3,12 +3,12 @@ import { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import book from "../../imgs/books.jpg";
 import test from "../../imgs/five.jpg";
+
 // import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
 import Modal from "react-awesome-modal";
-
-// import x from "../../imgs/starcolored.jpg";
-// import pic from "../../imgs/Capture.PNG";
+import { BsPersonFill } from "react-icons/bs";
+import { BiMenu } from "react-icons/bi";
 
 import "./Content.css";
 import { Form, Button, Navbar, FormControl, Card } from "react-bootstrap";
@@ -127,16 +127,35 @@ class Content extends Component {
               className="modal"
               visible={this.state.visible}
               width="50%"
-              height="500px"
+              height="350px"
               effect="fadeInUp"
               style={{ opacity: "0.2" }}
               onClickAway={() => this.closeModal()}
             >
-              <div>
-                <img src={test} alt="book" />
-                <h1>{this.state.data[this.state.index].tittle}</h1>
-                <p></p>
+              <div className="info_about_book">
+                <div>
+                  <img src={test} alt="book" />
+                </div>
+                <div>
+                  <h3>{this.state.data[this.state.index].tittle}</h3>
+                  <p></p>
+                </div>
               </div>
+              {dta.rate.map((rate, index) => {
+                return (
+                  <div class="rate-this-starss">
+                    <button></button>
+                  </div>
+                );
+              })}
+              <Button
+                // onClick={this.cardindex.bind(this, tittle)}
+                variant="primary"
+                style={{ position: "relative", left: "350px" }}
+                // onClick={() => this.openModal(this, index)}
+              >
+                DownLoad
+              </Button>
             </Modal>
           </Card>
         </div>
@@ -169,12 +188,15 @@ class Content extends Component {
             style={{ position: "absolute", left: "1250px" }}
             onClick={this.showDivinfo}
           >
-            Profile
+            <BiMenu width="500px" />
           </Navbar.Brand>
         </Navbar>
 
         <div className="divinfo" id="divInf">
-          <h3>Mohab_Elhbashy</h3>
+          <h3>
+            <BsPersonFill />
+            Mohab_Elhbashy
+          </h3>
           <hr />
           <h5
             style={{
@@ -185,7 +207,7 @@ class Content extends Component {
               color: "#0000FF ",
             }}
           >
-            LOG OuT !
+            LOG OuT
           </h5>
         </div>
         {mapping}

@@ -32,6 +32,8 @@ class App extends Component {
     return (
       <Router>
         {/* <Nav /> */}
+        <i class="fas fa-bars"></i>
+
         <Switch>
           <Route path="/" exact component={Mainapage} />
           <Route path="/signup" exact component={Content} />
