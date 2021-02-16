@@ -65,3 +65,58 @@
   font-style: italic;
   text-align: center;
 }
+
+.headerone {
+  position: absolute;
+  left: 100px;
+  top: 50px;
+}
+.butsingup {
+  position: absolute;
+  left: 140px;
+  top: 120px;
+  width: 150px;
+}
+.loginbutt {
+  position: absolute;
+  left: 600px;
+  top: 50px;
+}
+.secondbutt {
+  position: absolute;
+  left: 630px;
+  top: 120px;
+  width: 150px;
+}
+
+@media (max-width: 678px) {
+  .Mainpage {
+    background-size: 678px cover;
+  }
+  .signup {
+    width: 678px;
+    left: 0;
+  }
+  .headerone {
+    left: 30px;
+  }
+  .butsingup {
+    left: 70px;
+    width: 120px;
+  }
+  .loginbutt {
+    left: 400px;
+  }
+  .secondbutt {
+    left: 430px;
+    width: 120px;
+  }
+  .login_form {
+    left: 259px;
+    width: 300px;
+  }
+  .sign_form {
+    left: 259px;
+    width: 300px;
+  }
+}

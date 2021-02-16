@@ -7,8 +7,8 @@ import test from "../../imgs/five.jpg";
 // import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
 import Modal from "react-awesome-modal";
-import { BsPersonFill } from "react-icons/bs";
-import { BiMenu } from "react-icons/bi";
+import { BsPersonFill, BsFillHeartFill } from "react-icons/bs";
+import { BiMenu, BiLogOut } from "react-icons/bi";
 
 import "./Content.css";
 import { Form, Button, Navbar, FormControl, Card } from "react-bootstrap";
@@ -80,6 +80,11 @@ class Content extends Component {
     });
   };
 
+  construc = (name, age, salary) => {
+    this.name = name;
+    this.age = age;
+    this.salary = salary;
+  };
   closeModal = () => {
     this.setState({
       visible: false,
@@ -127,7 +132,7 @@ class Content extends Component {
               className="modal"
               visible={this.state.visible}
               width="50%"
-              height="350px"
+              // height="350px"
               effect="fadeInUp"
               style={{ opacity: "0.2" }}
               onClickAway={() => this.closeModal()}
@@ -178,7 +183,7 @@ class Content extends Component {
               alt="book"
             />
           </Navbar.Brand>
-          <Navbar.Brand>BooKs</Navbar.Brand>
+          <Navbar.Brand className="books">BooKs</Navbar.Brand>
           <Form inline>
             <FormControl type="text" placeholder="Search" className="mr-sm-2" />
             <Button variant="outline-info">Search</Button>
@@ -194,20 +199,35 @@ class Content extends Component {
 
         <div className="divinfo" id="divInf">
           <h3>
-            <BsPersonFill />
+            <span style={{ borderRadius: "50px", border: "0px solid white" }}>
+              <BsPersonFill />
+            </span>
             Mohab_Elhbashy
           </h3>
+          <p>See your profile</p>
           <hr />
+          <h4>
+            my favourite
+            <span>
+              <BsFillHeartFill />
+            </span>
+          </h4>
+          <hr />
+          <h4>All reviews</h4>
+          <hr />
+
           <h5
             style={{
               // letterSpacing: "10px",
               position: "absolute",
               top: "325px",
               left: "100px",
-              color: "#0000FF ",
             }}
           >
             LOG OuT
+            <span>
+              <BiLogOut />
+            </span>
           </h5>
         </div>
         {mapping}

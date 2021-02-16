@@ -25,10 +25,20 @@ class Mainapage extends Component {
     }, 6000);
   }
   movelogin = () => {
-    document.getElementById("sign").style.transform = "translate(-120%, 0)";
-    document.getElementById("log").style.transform = "translate(-120%, 0)";
+    if (window.innerWidth === 678) {
+      document.getElementById("sign").style.transform = "translate(-78%, 0)";
+      document.getElementById("log").style.transform = "translate(-78%, 0)";
 
-    document.getElementById("log").style.zIndex = "0";
+      console.log("m4 sha8al");
+
+      document.getElementById("log").style.zIndex = "0";
+    }
+    if (window.innerWidth > 678) {
+      document.getElementById("sign").style.transform = "translate(-120%, 0)";
+      document.getElementById("log").style.transform = "translate(-120%, 0)";
+
+      document.getElementById("log").style.zIndex = "0";
+    }
   };
   backlogin = () => {
     document.getElementById("log").style.transform = "translate(10%, 0)";
@@ -45,7 +55,7 @@ class Mainapage extends Component {
   };
   render() {
     return (
-      <div className="Mainpage">
+      <div id="mainpage" className="Mainpage">
         <p
           style={{
             color: "white",
@@ -57,31 +67,17 @@ class Mainapage extends Component {
           {this.state.img[this.state.index]}
         </p>
         <div className="signup">
-          <h3 style={{ position: "absolute", left: "100px", top: "50px" }}>
-            Don't have an account?
-          </h3>
-          <h3 style={{ position: "absolute", left: "600px", top: "50px" }}>
-            Have an account?
-          </h3>
+          <h5 className="headerone">Don't have an account?</h5>
+          <h5 className="loginbutt">Have an account?</h5>
           <Button
-            style={{
-              position: "absolute",
-              left: "200px",
-              top: "120px",
-              width: "150px",
-            }}
+            className="butsingup"
             variant="outline-secondary"
             onClick={this.movelogin}
           >
             SiGN UP
           </Button>
           <Button
-            style={{
-              position: "absolute",
-              left: "630px",
-              top: "120px",
-              width: "150px",
-            }}
+            className="secondbutt"
             variant="outline-secondary"
             onClick={this.backlogin}
           >
